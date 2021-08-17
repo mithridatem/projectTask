@@ -1,0 +1,141 @@
+/*-----------------------------------------------------
+        Suppression marge et padding desktop :
+-----------------------------------------------------*/
+body, html{
+    margin: 0;
+    padding: 0;
+}
+/*-----------------------------------------------------
+                    Menu desktop :
+-----------------------------------------------------*/
+nav{
+    display: flex;
+    justify-content: space-between;
+    background-color: blue;
+}
+nav ul{
+    display: flex;
+    padding-right: 50px;
+    background-color: blue;
+}
+nav a{
+    text-decoration: none;
+}
+nav li{
+    padding: 10px;
+    margin-left: 50px;
+    list-style: none;
+    color: white;
+    border: solid white 1px;
+    border-radius: 5px;
+    font-family: Roboto;
+    cursor: pointer;
+}
+nav li:hover{
+    background-color: white;
+    border-color:blue;
+    color:blue;
+}
+nav .burgerButton{
+    margin: 10px;
+    cursor: pointer;
+    display: none;
+}
+h1{
+    padding-left: 20px;
+    color:white;
+}
+nav .brand{
+    margin: 10px;
+    cursor: pointer;   
+}
+.subnav{
+    display: flex;
+    background-color:blue; 
+}
+
+nav .subnav>div {
+    display: flex;
+    color:#a0c1b8 ;
+    font-family: Roboto;
+}
+/*-----------------------------------------------------
+                    Menu Mobile :
+-----------------------------------------------------*/
+@media screen and (max-width: 600px){
+
+    nav{
+        justify-content: center;
+        flex-direction: column;
+        z-index: 0;
+        background-color: transparent;
+    }
+    nav ul{
+        z-index: 1;
+        flex-direction: column;
+        margin-top: -10px;
+        padding-bottom: 20px;
+        display: none;      
+    }
+    .subnav{
+        z-index: 10;
+    }
+    nav li{
+        z-index: 2;
+        margin-top: 20px;
+        margin-left: 0px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        font-size: large;
+    }  
+    nav .burgerButton{
+        margin: 10px;
+        cursor: pointer;
+        display: flex;
+    }    
+    nav>.subnav>div{
+        display: none;
+    }   
+}
+/*-----------------------------------------------------
+                Animation Menu Mobile :
+-----------------------------------------------------*/
+@keyframes slidein {
+    from {
+      transform: translate3d(0, -100%, 0);      
+      visibility: visible;
+    }
+  
+    to {
+      transform: translate3d(0, 0, 0);
+    }
+  }  
+  
+@keyframes slideout {
+    from {
+        transform: translate3d(0, 0, 0);
+      }
+    
+      to {
+        visibility: hidden;
+        transform: translate3d(0, -100%, 0);
+      }
+  }
+/*-----------------------------------------------------
+                    Body desktop:
+-----------------------------------------------------*/
+h2, label, .champ, #select{
+    padding-left: 20px;;
+}
+#message{
+    padding-left: 20px;
+    font-weight: bold;
+    font-family: Roboto; 
+}
+p{
+    padding-left: 20px;
+    font-weight: bold;
+}
+p, h1, h2, label, li, a{
+    font-family: Roboto;
+}
