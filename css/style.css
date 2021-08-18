@@ -6,6 +6,24 @@ body, html{
     padding: 0;
 }
 /*-----------------------------------------------------
+                    Body desktop:
+-----------------------------------------------------*/
+h2, label, .champ, #select{
+    padding-left: 20px;;
+}
+#message{
+    padding-left: 20px;
+    font-weight: bold;
+    font-family: Roboto; 
+}
+p{
+    padding-left: 20px;
+    font-weight: bold;
+}
+p, h1, h2, label, li, a{
+    font-family: Roboto;
+}
+/*-----------------------------------------------------
                     Menu desktop :
 -----------------------------------------------------*/
 nav{
@@ -95,7 +113,16 @@ nav .subnav>div {
     }    
     nav>.subnav>div{
         display: none;
-    }   
+    }
+    #message, h2, label, p{
+        font-size: 0.8em;
+    }
+    /* centrage*/
+    #global {
+        margin-left: auto;
+        margin-right: auto;
+        width: 300px; /* largeur obligatoire pour être centré */
+    }
 }
 /*-----------------------------------------------------
                 Animation Menu Mobile :
@@ -121,21 +148,4 @@ nav .subnav>div {
         transform: translate3d(0, -100%, 0);
       }
   }
-/*-----------------------------------------------------
-                    Body desktop:
------------------------------------------------------*/
-h2, label, .champ, #select{
-    padding-left: 20px;;
-}
-#message{
-    padding-left: 20px;
-    font-weight: bold;
-    font-family: Roboto; 
-}
-p{
-    padding-left: 20px;
-    font-weight: bold;
-}
-p, h1, h2, label, li, a{
-    font-family: Roboto;
-}
+
