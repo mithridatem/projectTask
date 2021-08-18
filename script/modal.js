@@ -23,7 +23,7 @@ function openModal(pId){
                             resizable: false,
                             draggable:true,
                             width: 440,
-                            title: 'toto :'
+                            title: 'Update task :'
                         });
                         //Je remplis ma DIV avec les infos
                         $('#dialog').html(data);
