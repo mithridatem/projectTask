@@ -14,8 +14,6 @@
     include('./model/user.php');
     //import de la connexion à la bdd
     include('./utils/connexionbdd.php');    
-    //import du header
-    include('view/header_connexion.php');
     //import du menu
     include('view/menu.php');
     //import de la vue connexion
