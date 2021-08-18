@@ -58,7 +58,7 @@
 
         try
         {   
-            //requête ajout d'une tâche
+            //requête mise à jour d'une tâche
             $req = $bdd->prepare('UPDATE task SET name_task = :name_task, content_task = :content_task,  date_task = :date_task, validate_task = :validate_task,
             id_user = :id_user, id_cat = :id_cat WHERE id_task = :id_task');
             //éxécution de la requête SQL
