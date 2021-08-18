@@ -33,10 +33,10 @@
         //appel de la méthode pour ajouter une categorie de tâche en bdd
         $cat->createCat($bdd);
         echo '<p>la catégorie : <span>'.$cat->getNameCat().'</span> 
-        à était ajoutée !!!</p>';
+        à était ajoutée !!!</p></div>';
     }
     else
     {
-        echo '<p>Veuillez remplir le champ de formulaire.</p>';
+        echo '<p id="#message">Veuillez remplir le champ de formulaire.</p></div>';
     }
 ?>

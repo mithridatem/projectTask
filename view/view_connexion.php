@@ -9,6 +9,6 @@
                 <p class="champ"><input type="submit" value="Connexion"></p>
             </form>
             <p id="message"></p>
-    </div>
+        </div>
     </body>
 </html>

@@ -18,7 +18,6 @@
                 <p>date de fin:</p>
                 <p><input type="date" name="date_task"></p>
                 <p><input type="submit" value="Ajouter"></p> 
-            </form>
-        </div>    
+            </form>            
     </body>
 </html>

@@ -12,6 +12,5 @@
                 <p><input type="text" name="mdp_user"></p>
                 <p><input type="submit" value="Ajouter"></p> 
             </form>
-        <div>
     </body>
 </html>
