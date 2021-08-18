@@ -16,7 +16,7 @@
     /*-----------------------------------------------------
                         Tests :
     -----------------------------------------------------*/   
-    //test si l'id de la tache existe
+    //test si l'id de la tache existe dans l'url méthode GET (ID)
     if(isset($_GET['ID']))
     {
         $id_task = $_GET['ID'];

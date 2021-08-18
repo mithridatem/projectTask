@@ -4,7 +4,7 @@ function openModal(pId){
     //fonction ajax pour récupérer les données
     jQuery.ajax({
                 type: "GET",
-                url: "./view/add_detail_task.php?ID="+pId,
+                url: "./view/view_detail_task.php?ID="+pId,
                 dataType: 'text',
                 contentType: "application/x-www-form-urlencoded;charset=UTF-8",
                 beforeSend: function(xhr) {
