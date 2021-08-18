@@ -39,7 +39,7 @@
             //réponse si l'utilisateur existe déja
             echo '<p>l\'utilisateur qui à pour nom : <span>'.$_POST['name_user'].'</span> 
             , prénom : <span>'.$_POST['first_name_user'].'</span> et 
-            login : <span>'.$_POST['login_user'].'</span> existe déja !!!</p>';
+            login : <span>'.$_POST['login_user'].'</span> existe déja !!!</p><div>';
         }
         //test si l'utilisateur n'existe pas
         else
@@ -51,12 +51,12 @@
             echo '<p>l\'utilisateur qui à pour nom : <span>'.$_POST['name_user'].'</span> 
             et prénom : <span>'.$_POST['first_name_user'].'</span> login : 
             <span>'.$_POST['login_user'].'</span> et pour mot de passe : <span>'.md5($_POST['first_name_user']).'
-            </span> à été ajouté !!!</p>';           
+            </span> à été ajouté !!!</p><div>';           
         }        
     }
     //test si les champs de formulaire ne sont pas remplis 
     else
     {
-        echo '<p>Veuillez remplir les champs de formulaire.</p>';
+        echo '<p>Veuillez remplir les champs de formulaire.</p><div>';
     }    
 ?>

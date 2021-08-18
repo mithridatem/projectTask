@@ -20,13 +20,7 @@
     if(isset($_GET['ID']))
     {
         $id_task = $_GET['ID'];
-        //affiche l'id de la tâche
-        echo "l'id de la tache est égal à : $id_task";
-        echo '<br>';
-        //affiche l'idUser de la session
-        echo 'l\'id de l\'utilisateur est égal à : '.$_SESSION['idUser'].'';
-        echo '<br>';
-    
+        echo 'Mettre à jour une tâche<br>';
         echo '<form action="./show_task.php"  method="get">'; 
          
         $task1 = new Task();

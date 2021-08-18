@@ -169,7 +169,7 @@
                 while ($donnees = $reponse->fetch())
                 {   
                     //affichage du contenu de la requête sql
-                    echo '<p><input type="text" name ="id_task" value="'.$donnees['id_task'].'"></p>';
+                    //echo '<p><input type="text" name ="id_task" value="'.$donnees['id_task'].'"></p>';
                     echo '<p>nom de la tâche :</p>';
                     echo '<p><input type="text" name ="name_task" value="'.$donnees['name_task'].'"></p>';
                     echo '<p>contenu de la  tâche:</p>';

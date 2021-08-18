@@ -6,6 +6,5 @@
                 <p><input type="text" name="name_cat"></p>
                 <p><input type="submit" value="Ajouter"></p> 
             </form>
-        </div>
     </body>
 </html>

@@ -36,10 +36,10 @@
         $task->setIdUserTask($_SESSION['idUser']);
         $task->setIdCat($_POST['id_cat']);
         $task->createTask($bdd);
-        echo '<p>Ajout de la tâche : '.$_POST['name_task'].'</p>';    
+        echo '<p>Ajout de la tâche : '.$_POST['name_task'].'</p></div>';    
     }
     else
     {
-        echo '<p>Veuillez remplir les champs de formulaire nom, contenu et date.</p>';
+        echo '<p>Veuillez remplir les champs de formulaire nom, contenu et date.</p></div>';
     }
 ?> 
