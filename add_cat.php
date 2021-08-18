@@ -16,8 +16,6 @@
     //ajout du fichier de connexion 
     //(à modifier en fonction de votre base de données dans mon cas la bdd l'appele task1)
     include('./utils/connexionbdd.php');
-    //ajout du header
-    include('./view/header_cat.php');
     //ajout du menu
     include('./view/menu.php');
     //import de la vue view_add_user.php (formulaire d'insertion d'un utilisateur)
