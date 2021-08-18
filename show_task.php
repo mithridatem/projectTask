@@ -16,8 +16,6 @@
     include('./model/task.php');
     //import de la connexion à la bdd
     include('./utils/connexionbdd.php');    
-    //import du header
-    include('view/header_view_all_task.php');
     //import du menu
     include('view/menu.php');
     //import de la vue connexion
