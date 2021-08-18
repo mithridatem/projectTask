@@ -19,19 +19,24 @@
     //import du menu
     include('view/menu.php');
     //import de la vue connexion
-    include('view/view_all_task.php');     
+    include('view/view_all_task.php');
     /*-----------------------------------------------------
-                            Tests :
-    -----------------------------------------------------*/
+                            Vue :
+    -----------------------------------------------------*/    
     echo '<form action="" method="post">';
     echo '<table>';
+    //nouvel objet task
     $task = new Task();
+    //appel de la méthode showAllTask($bdd) qui retourne toutes les tâches
     $task->showAllTask($bdd);    
     echo '</table>';
     echo '<br><p><input type="submit" value="terminer tâche" /></p>';
     echo '</form>';
     //popup modal
     echo '<div id="dialog"></div>';
+    /*-----------------------------------------------------
+                            Tests :
+    -----------------------------------------------------*/
     //test id_task
     if (isset($_POST['id_task']))
     {   
@@ -42,10 +47,11 @@
             $task->validateTask($bdd, $value);            
         }
     }
+    //test des valeurs en GET dans l'url
     if(isset($_GET['name_task']) AND isset($_GET['content_task']) AND isset($_GET['date_task']) 
     AND isset($_GET['id_cat']) AND isset($_GET['id_task']))
     {
-        //variables
+        //Création des variables
         $idtask = $_GET['id_task'];
         $nameTask = $_GET['name_task'];
         $contentTask = $_GET['content_task'];
@@ -69,8 +75,6 @@
             'id_user' => $idUserTask,
             'id_cat' => $idCat,
             ));
-            //affichage de la mise à jour
-            //echo 'mise à jour de la tâche qui à comme id = '.$idtask.'  nom : '.$nameTask.'  date : '.$dateTask.'';
             //redirection vers show_task.php
             header("Location: show_task.php");
         }

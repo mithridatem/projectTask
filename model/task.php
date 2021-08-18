@@ -159,7 +159,7 @@
                 die('Erreur : '.$e->getMessage());
             }
         }
-        //méthode affichage de toutes les tâches
+        //méthode affichage des informations d'une tâche
         public function getTask($bdd, $pId)
         {
             try
@@ -168,8 +168,7 @@
                 //boucle pour parcourir et afficher le contenu de chaque ligne de la requete
                 while ($donnees = $reponse->fetch())
                 {   
-                    //affichage du contenu de la requête sql
-                    //echo '<p><input type="text" name ="id_task" value="'.$donnees['id_task'].'"></p>';
+                    //affichage du contenu d'une tâchedepuis la requête sql
                     echo '<p>nom de la tâche :</p>';
                     echo '<p><input type="text" name ="name_task" value="'.$donnees['name_task'].'"></p>';
                     echo '<p>contenu de la  tâche:</p>';
