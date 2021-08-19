@@ -1,8 +1,7 @@
 # projectTask
 Comment Récupérer et utiliser le projet Task sur votre ordinateur  (Tutoriel) :
-1 il vous faut sur votre machine wamp, xampp ou un autre serveur (apache, php, mysql),(modifié)
-2 Dézipper le contenu de l'archive dans le dossier à la racine du serveur web (cela va dépendre du serveur : wamp dossier WWW, Xamp : dossier htdocs
-), ou faire un git clone du dépôt dans un dossier à la racine du serveur apache,
+1 il vous faut sur votre machine wamp, xampp ou un autre serveur (apache, php, mysql),
+2 Dézipper le contenu de l'archive dans le dossier à la racine du serveur web (cela va dépendre du serveur : wamp ->dossier WWW, Xamp -> dossier htdocs), ou faire un git clone du dépôt dans un dossier à la racine du serveur apache,
 3 éditez le fichier /utils/connexionbdd.php avec vos informations de serveur BDD (login (défaut root), mdp (défaut vide), adresse du serveur mysql (défaut localhost),
 4 Créer une base de données ( depuis phpyadmin ou autre) qui se nomme task1 de type utf8generalci,
 5 Exécuter le script sql de stucture ci-dessous dans votre bdd (il va créer les 3 tables et les relations du projet depuis phpmyadmin),
