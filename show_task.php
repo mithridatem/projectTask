@@ -47,7 +47,7 @@
             $task->validateTask($bdd, $value);            
         }
     }
-    //test des valeurs en GET dans l'url
+    //test des valeurs en GET dans l'url pour mettre à jour la tâche
     if(isset($_GET['name_task']) AND isset($_GET['content_task']) AND isset($_GET['date_task']) 
     AND isset($_GET['id_cat']) AND isset($_GET['id_task']))
     {
