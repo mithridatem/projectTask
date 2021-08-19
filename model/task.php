@@ -92,7 +92,7 @@
         /*-----------------------------------------------------
                                 Fonctions :
         -----------------------------------------------------*/
-        //méthode ajout d'un utilisateur en bdd
+        //méthode ajout d'une tâche en bdd
         public function createTask($bdd)
         {   
             //récuparation des valeurs de l'objet
@@ -135,8 +135,8 @@
                     //et éxécuter la requéte ajax quand on enregistre
                     echo '<tr><td><p><input type="checkbox" name="id_task[]" value="'.$donnees['id_task'].'"/>
                     <a href="#" onclick="openModal('.$donnees['id_task'].')"  
-                    id="'.$donnees['id_task'].'">Nom : '.$donnees['name_task'].' , 
-                    date : '.$donnees['date_task'].'</p></a></td></tr>';                    
+                    id="'.$donnees['id_task'].'">Nom de la tâche : '.$donnees['name_task'].' , 
+                    date de fin : '.$donnees['date_task'].'</p></a></td></tr>';                    
                 }
             }
             catch(Exception $e)
@@ -149,7 +149,7 @@
         {
             try
             {
-                //requete pour update le statut de la tache =0
+                //requete pour update le statut de la tache = 1 (true)
                 $req = $bdd->query('UPDATE task SET validate_task = 1 Where id_task ='.$value.'');
                  //redirection vers show_task.php
                  header("Location: show_task.php");
@@ -187,46 +187,33 @@
                 die('Erreur : '.$e->getMessage());
             }
         }
+        //méthode mise à jour d'une tâche
         public function updatetask($bdd)
         {    
-            
-            /*$new_task = new Task(;)
-            //getIdTask
-            $new_task->setIdTask($_GET['id_task']);
-            //getNameTask
-            $new_task->setNameTask($_GET['name_task']);
-            //getContentTask
-            $new_task->setContentTask($_GET['content_task']);
-            //getDateTask
-            $new_task->setDateTask($_GET['date_task']);
-            //getIdUserTask
-            $new_task->setIdUserTask($_SESSION['idUser']);
-            //getIdCat
-            $new_task->setIdCat($_GET['id_cat']);*/
-
             //récuparation des valeurs de l'objet
             $id_task = $this->getIdTask();
             $name_task = $this->getNameTask();
             $content_task = $this->getContentTask();
             $date_task = $this->getDateTask();
             $id_user = $this->getIdUserTask();
-            $id_cat = $this->getIdCat();
-         
+            $id_cat = $this->getIdCat();            
             try
             {   
-                //requête ajout d'une tâche
+                //requête SQL mise àjour d'une tâche (update)
                 $req = $bdd->prepare('UPDATE task SET name_task = :name_task, content_task = :content_task,  date_task = :date_task, validate_task = :validate_task,
                 id_user = :id_user, id_cat = :id_cat WHERE id_task = :id_task');
                 //éxécution de la requête SQL
                 $req->execute(array(
-                'id_task' => $name_task,   
+                'id_task' => $id_task,   
                 'name_task' => $name_task,
                 'content_task' => $content_task,
                 'date_task' => $date_task,
-                'validate_task'=>0,
+                'validate_task'=> 0,
                 'id_user' => $id_user,
                 'id_cat' => $id_cat,
             ));
+                //redirection vers show_task.php
+                header("Location: show_task.php?update_task=true&idtask=$id_task");
             }
             catch(Exception $e)
             {

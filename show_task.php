@@ -29,9 +29,15 @@
     $task = new Task();
     //appel de la méthode showAllTask($bdd) qui retourne toutes les tâches
     $task->showAllTask($bdd);    
-    echo '</table>';
-    echo '<br><p><input type="submit" value="terminer tâche" /></p>';
+    echo '</table><br>';
+    echo '<p><input type="submit" value="terminer tâche" /></p>';
     echo '</form>';
+    //récupération de la tâche mise à jour
+    if(isset($_GET['update_task']) AND isset($_GET['idtask']))
+    {
+        //affichage de la tâche mise à jour
+        echo '<p> La tâche N° '.$_GET['idtask'].' a été mise à jour </p>';
+    }
     //popup modal
     echo '<div id="dialog"></div>';
     /*-----------------------------------------------------
@@ -43,7 +49,7 @@
         // boucle pour chaque tâches cochées
         foreach($_POST['id_task'] as $value)
         {   
-            //éxécution de la méthode validateTask
+            //éxécution de la méthode validateTask qui permet de terminer une tâche
             $task->validateTask($bdd, $value);            
         }
     }
@@ -59,28 +65,18 @@
         $idCat = $_GET['id_cat'];
         $validateTask = 0;
         $idUserTask = $_SESSION['idUser'];
-       try
-        {   
-            //requête mise à jour d'une tâche
-            $req = $bdd->prepare('UPDATE task SET name_task = :name_task, content_task = :content_task,  date_task = :date_task, validate_task = :validate_task,
-            id_user = :id_user, id_cat = :id_cat WHERE id_task = :id_task');
-            //éxécution de la requête SQL
-            $req->execute(array(
-            'id_task' => $idTask,   
-            'name_task' => $nameTask,
-            'content_task' => $contentTask,
-            'date_task' => $dateTask,
-            'validate_task'=>$validateTask,
-            'id_user' => $idUserTask,
-            'id_cat' => $idCat,
-            ));
-            //redirection vers show_task.php
-            header("Location: show_task.php");
-        }
-        catch(Exception $e)
-        {
-        //affichage d'une exception en cas d’erreur
-        die('Erreur : '.$e->getMessage());
-        }
+        //nouvel objet task
+        $task1 = new Task();
+        //affectation des valeurs à l'objet $task1
+        $task1->setIdTask($idTask);
+        $task1->setNameTask($nameTask);
+        $task1->setContentTask($contentTask);
+        $task1->setDateTask($dateTask);
+        $task1->setIdCat($idCat);
+        $task1->setValidateTask($validateTask);
+        $task1->setIdUserTask($idUserTask);
+        
+        //appel de la méthode updateTask pour mettre à jour une tâche depuis le modal
+        $task1->updatetask($bdd);        
     }
 ?>  
