@@ -135,8 +135,8 @@
                     //et éxécuter la requéte ajax quand on enregistre
                     echo '<tr><td><p><input type="checkbox" name="id_task[]" value="'.$donnees['id_task'].'"/>
                     <a href="#" onclick="openModal('.$donnees['id_task'].')"  
-                    id="'.$donnees['id_task'].'">Nom de la tâche : '.$donnees['name_task'].' , 
-                    date de fin : '.$donnees['date_task'].'</p></a></td></tr>';                    
+                    id="'.$donnees['id_task'].'">'.$donnees['name_task'].' , 
+                     pour le : '.$donnees['date_task'].'</p></a></td></tr>';                    
                 }
             }
             catch(Exception $e)
