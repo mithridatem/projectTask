@@ -70,7 +70,6 @@
                {   
                   //liste deroulante <select> html
                   echo '<option value="'.$donnees['id_cat'].'">'.$donnees['name_cat'].'</option>';
-                  //liste deroulante </select> html
                }                
             }
             catch(Exception $e)

@@ -52,22 +52,21 @@
     AND isset($_GET['id_cat']) AND isset($_GET['id_task']))
     {
         //Création des variables
-        $idtask = $_GET['id_task'];
+        $idTask = $_GET['id_task'];
         $nameTask = $_GET['name_task'];
         $contentTask = $_GET['content_task'];
         $dateTask = $_GET['date_task'];
         $idCat = $_GET['id_cat'];
         $validateTask = 0;
         $idUserTask = $_SESSION['idUser'];
-
-        try
+       try
         {   
             //requête mise à jour d'une tâche
             $req = $bdd->prepare('UPDATE task SET name_task = :name_task, content_task = :content_task,  date_task = :date_task, validate_task = :validate_task,
             id_user = :id_user, id_cat = :id_cat WHERE id_task = :id_task');
             //éxécution de la requête SQL
             $req->execute(array(
-            'id_task' => $idtask,   
+            'id_task' => $idTask,   
             'name_task' => $nameTask,
             'content_task' => $contentTask,
             'date_task' => $dateTask,

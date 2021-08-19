@@ -22,11 +22,10 @@
         $id_task = $_GET['ID'];
         echo '<p>Mettre à jour une tâche</p>';
         echo '<form action="./show_task.php"  method="get">'; 
-         
+        //création d'un objet task 
         $task1 = new Task();
-        $task1->getTask($bdd,$id_task);
-        echo '<p>Type de  tâche:</p>';
-        echo '<p><select name="id_cat">';    
+        //appelde la méthode qui affiche le détail d'une tâche à partir de son id_task
+        $task1->getTask($bdd,$id_task);       
         //création d'un objet category
         $cat = new Cat("test");
         //appel de la Méthode génération du menu déroulant liste des catégories
