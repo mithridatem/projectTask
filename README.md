@@ -7,7 +7,7 @@ Comment Récupérer et utiliser le projet Task sur votre ordinateur  (Tutoriel) 
 4 Créer une base de données ( depuis phpyadmin ou autre) qui se nomme task1 de type utf8generalci,
 5 Exécuter le script sql de stucture ci-dessous dans votre bdd (il va créer les 3 tables et les relations du projet depuis phpmyadmin),
 
---SCRIPT SQL DE lA BDD
+--SCRIPT SQL DE LA BDD
 -- Base de données : `task1`
 -- --------------------------------------------------------
 -- Structure de la table `cat`
