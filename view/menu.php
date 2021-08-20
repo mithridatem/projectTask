@@ -19,7 +19,7 @@
             <a href="./add_cat.php"><li class="categories">Ajouter une categorie</li></a>
             <a href="./add_task.php"><li class="taches">Ajouter une tâche</li></a>
             <a href="./show_task.php"><li class="afficher">Afficher les tâches</li></a>
-            <a href="./deconnected.php"><li class="deco" >Deconnexion</li></a>';
+            <a href="./deconnected.php" class="btdeco"><li class="deco" >Deconnexion</li></a>';
     }
     //si l'utilisateur n'est pas connecté (connexion, ajouter compte, deconnexion)  
     else

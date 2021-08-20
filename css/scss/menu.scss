@@ -36,11 +36,27 @@ nav {
     ul {
         display: flex;
         flex-direction: column;
+        flex: 1 1 0;
         padding: 0;
         margin: 0;
     }
 
-    
+    a.btdeco{
+        margin-top: auto;
+    }
+
+    li.deco{
+        padding: 10px;
+        list-style: none;
+        color: $nav-color;
+        cursor: pointer;
+        border-top: rgba($nav-color, 0.2) 1px solid;
+
+        &:hover {
+            background-color: rgba(#FC4442,0.2);
+            border-top-color:#FC4442;
+        }
+    }
 
     li{
         padding: 10px;
