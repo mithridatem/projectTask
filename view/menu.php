@@ -3,7 +3,8 @@
         <div class="subnav">
             <img src="./image/menu.svg"  class="burgerButton" width="40px">
             <div>
-                <h1>Project Task</h1> 
+                <img src="./image/clipboard.svg"  width="40px">
+                <h1>Project Task</h1>
             </div>
         </div>
         <ul>

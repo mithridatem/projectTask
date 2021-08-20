@@ -1,0 +1,12 @@
+#global{
+    margin-left: 300px;
+    padding: 20px;
+}
+
+@media screen and (max-width: 600px) {
+    #global{
+        margin-top: 70px;
+        margin-left: 0;
+    }
+}
+

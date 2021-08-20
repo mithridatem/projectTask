@@ -1,37 +1,59 @@
+/**
+palette:
+color1 : #222831
+color2 : #393E46
+color3 : #FFD369
+color4 : #EEEEEE
+*/
 
-/*-----------------------------------------------------
-                    Menu desktop :
------------------------------------------------------*/
+$nav-bg-color:#EEEEEE;
+$nav-header-color: #222831;
+$nav-color : #393E46;
+$nav-color-hover:#FFD369;
+
+
 nav {
+    position: fixed;
+    top:0;
     display: flex;
-    justify-content: space-between;
-    background-color: blue;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: $nav-bg-color;
+    width: 300px;
+    height: 100vh;
+
+    a{
+        text-decoration: none;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+    }
+
+    li {
+        padding: 10px;
+        list-style: none;
+        color: $nav-color;
+        cursor: pointer;
+        border-bottom: rgba($nav-color, 0.2) 1px solid;
+
+        &:hover {
+            background-color: rgba($nav-color-hover,0.2);
+            border-bottom-color: $nav-color-hover;
+        }
+    }
+
+    .subnav{
+        display: flex;
+        background-color: $nav-header-color;
+    }
 }
-nav ul {
-    display: flex;
-    padding-right: 50px;
-    background-color: green;
-}
-nav a {
-    text-decoration: none;
-}
-nav li {
-    padding: 10px;
-    margin-left: 50px;
-    list-style: none;
-    color: white;
-    border: solid white 1px;
-    border-radius: 5px;
-    font-family: Roboto;
-    cursor: pointer;
-}
-nav li:hover {
-    background-color: white;
-    border-color: blue;
-    color: blue;
-}
+
 nav .burgerButton {
-    margin: 10px;
+
     cursor: pointer;
     display: none;
 }
@@ -44,27 +66,27 @@ nav .brand {
     margin: 10px;
     cursor: pointer;
 }
-.subnav {
-    display: flex;
-    background-color: orange;
-}
 
 nav .subnav > div {
     display: flex;
-    color: #a0c1b8;
-    font-family: Roboto;
+    margin-left: 20px;
 }
 /*-----------------------------------------------------
                     Menu Mobile :
 -----------------------------------------------------*/
 @media screen and (max-width: 600px) {
+
     nav {
+        position: fixed;
+        width: 100vw;
         justify-content: center;
         flex-direction: column;
         z-index: 0;
         background-color: transparent;
+        height: auto;
     }
     nav ul {
+        background-color: $nav-bg-color;
         z-index: 1;
         flex-direction: column;
         margin-top: -10px;
