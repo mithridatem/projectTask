@@ -1,12 +1,5 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-/**
-palette:
-color1 : #222831
-color2 : #393E46
-color3 : #FFD369
-color4 : #EEEEEE
-*/
 nav {
   position: fixed;
   top: 0;
