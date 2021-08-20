@@ -9,7 +9,9 @@
 </head>
     <body>
         <div id="global">
-            <h2>Ajouter une catégorie de tâche</h2>
+            <header>
+                <h1>Ajouter une catégorie</h1>
+            </header>
             <form action="" method="post">
                 <label for="name_cat">Ajouter une catégorie</label>
                 <p><input type="text" name="name_cat"></p>

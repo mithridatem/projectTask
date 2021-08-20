@@ -1,6 +1,22 @@
+$header-bg-color:#EEEEEE;
+$header-font-color: #222831;
+$header-color : #393E46;
+$header-color-hover:#FFD369;
+
+
 #global{
     margin-left: 300px;
-    padding: 20px;
+
+    header{
+        border-bottom: rgba($header-font-color, 0.2) 1px solid;
+        padding: 5px 20px;
+        box-shadow: 0px 5px 10px rgba($header-font-color, 0.1);
+        h1{
+            color: $header-font-color;
+            font-weight: 200;
+            font-size: 22px;
+        }
+    }
 }
 
 @media screen and (max-width: 600px) {

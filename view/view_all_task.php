@@ -13,6 +13,9 @@
 </head> 
 <body>
     <div id="global">
+        <header>
+                <h1>Listes des tâches</h1>
+        </header>
         <h2>Liste des tâches en cours :</h2>
     <div>
 </body>

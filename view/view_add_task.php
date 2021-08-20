@@ -9,7 +9,9 @@
 </head>
 <body>
     <div id="global">
-        <h2>Ajouter une tâche : </h2>
+        <header>
+            <h1>Ajouter une tâche</h1>
+        </header>
         <form action="" method="post">
             <p>Ajouter un nom de tâche:</p>
             <p><input type="text" name="name_task"></p>

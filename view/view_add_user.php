@@ -9,7 +9,9 @@
 </head>
 <body>
     <div id="global">
-        <h2>Ajouter un utilisateur</h2>
+        <header>
+            <h1>Ajouter un utilisateur</h1>
+        </header>
         <form action="" method="post">
             <label for="name_user">Ajouter un nom :</label>
             <p><input type="text" name="name_user"></p>

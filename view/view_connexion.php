@@ -9,6 +9,9 @@
 </head>
 <body>    
         <div id="global">
+            <header>
+                <h1>Connexion</h1>
+            </header>
             <h2>Saisir ces identifiants de connexion</h2>
             <form action="" method="post">
                 <label for="login_user">Login:</label>
