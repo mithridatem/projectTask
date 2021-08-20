@@ -23,5 +23,10 @@
             <p><input type="text" name="mdp_user"></p>
             <p><input type="submit" value="Ajouter"></p> 
         </form>
+        <script>
+            //affiche les objets de liste actif
+            let li = document.querySelector("li.comptes")
+            li.classList.add('active')
+        </script>
 </body>
 </html>

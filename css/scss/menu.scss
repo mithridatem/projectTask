@@ -3,6 +3,15 @@ $nav-header-color: #222831;
 $nav-color : #393E46;
 $nav-color-hover:#FFD369;
 
+.active{
+    background-color: rgba($nav-color-hover,0.6);
+    border-bottom-color: $nav-color-hover;
+
+    &:hover{
+        background-color: rgba($nav-color-hover,0.6);
+        border-bottom-color: $nav-color-hover; 
+    }
+}
 
 nav {
     position: fixed;
@@ -31,12 +40,16 @@ nav {
         margin: 0;
     }
 
-    li {
+    
+
+    li{
         padding: 10px;
         list-style: none;
         color: $nav-color;
         cursor: pointer;
         border-bottom: rgba($nav-color, 0.2) 1px solid;
+
+       
 
         &:hover {
             background-color: rgba($nav-color-hover,0.2);

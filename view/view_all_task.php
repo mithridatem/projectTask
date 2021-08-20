@@ -18,5 +18,10 @@
         </header>
         <h2>Liste des tâches en cours :</h2>
     <div>
+    <script>
+        //affiche les objets de liste actif
+        let li = document.querySelector("li.afficher")
+        li.classList.add('active')
+    </script>
 </body>
 </html>

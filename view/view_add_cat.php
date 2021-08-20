@@ -18,4 +18,9 @@
                 <p><input type="submit" value="Ajouter"></p> 
             </form>
     </body>
+    <script>
+        //affiche les objets de liste actif
+        let li = document.querySelector("li.categories")
+        li.classList.add('active')
+    </script>
 </html>

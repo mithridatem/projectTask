@@ -28,7 +28,12 @@
             </select></p>
             <p>date de fin:</p>
             <p><input type="date" name="date_task"></p>
-            <p><input type="submit" value="Ajouter"></p> 
-        </form>            
+            <p><input type="submit" value="Ajouter"></p>
+        </form>  
+        <script>
+            //affiche les objets de liste actif
+            let li = document.querySelector("li.taches")
+            li.classList.add('active')
+        </script>         
 </body>
 </html>

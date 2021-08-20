@@ -22,5 +22,10 @@
             </form>
             <p id="message"></p>
         </div>
+        <script>
+            //affiche les objets de liste actif
+            let li = document.querySelector("li.connexion")
+            li.classList.add('active')
+        </script>
     </body>
 </html>
