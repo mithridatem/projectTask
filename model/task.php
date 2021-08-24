@@ -170,12 +170,12 @@
                 while ($donnees = $reponse->fetch())
                 {   
                     //affichage du contenu d'une tâchedepuis la requête sql
-                    echo '<p><input type="text" name ="id_task" value="'.$donnees['id_task'].'"></p>';
-                    echo '<p>nom de la tâche :</p>';
+                    echo '<input type="text" name ="id_task" id = "id_task" value="'.$donnees['id_task'].'">';
+                    echo '<p>Nom de la tâche :</p>';
                     echo '<p><input type="text" name ="name_task" value="'.$donnees['name_task'].'"></p>';
-                    echo '<p>contenu de la  tâche:</p>';
+                    echo '<p>Contenu de la  tâche:</p>';
                     echo '<p><textarea name="content_task" rows="5" cols="33">'.$donnees['content_task'].'</textarea></p>';
-                    echo '<p>date de fin:</p>';
+                    echo '<p>Date de fin:</p>';
                     echo '<p><input type="date" name="date_task" value="'.$donnees['date_task'].'"></p>';
                     echo '<p>Type de  tâche:</p>';
                     echo '<p><select name="id_cat">';

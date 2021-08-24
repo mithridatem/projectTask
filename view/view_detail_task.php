@@ -20,8 +20,8 @@
     if(isset($_GET['ID']))
     {
         $id_task = $_GET['ID'];
-        echo '<p>Mettre à jour une tâche</p>';
-        echo '<form action="./show_task.php"  method="get">'; 
+        echo '<p id ="title_update_task">Mettre à jour une tâche</p>';
+        echo '<form action="./show_task.php"  method="get" id= "form_detail_task">'; 
         //création d'un objet task 
         $task1 = new Task();
         //appelde la méthode qui affiche le détail d'une tâche à partir de son id_task

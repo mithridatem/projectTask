@@ -6,6 +6,7 @@
     <title>Créer une tâche</title>
     <link rel="stylesheet" href="./css/style.css">
     <script src="./script/script.js" defer></script>
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
 </head>
 <body>
     <div id="global">
