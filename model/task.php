@@ -124,10 +124,12 @@
         }
         //méthode affichage de toutes les tâches
         public function showAllTask($bdd)
-        {
+        {   
+            //récupération de l'id de l'utilisateur depuis la connexion ($_SESSION['idUser'])
+            $idUser = $_SESSION['idUser'];
             try
-            {
-                $reponse = $bdd->query('SELECT id_task, name_task, date_task FROM task WHERE validate_task=0');
+            {   //requête qui récupére toutes les tâches non terminées d'un utilisateur
+                $reponse = $bdd->query('SELECT id_task, name_task, date_task FROM task WHERE validate_task=0 and id_user = '.$idUser.'');
                 //boucle pour parcourir et afficher le contenu de chaque ligne de la requete
                 while ($donnees = $reponse->fetch())
                 {   //affichage du contenu de la requete

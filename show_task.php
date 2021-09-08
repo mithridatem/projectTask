@@ -28,7 +28,7 @@
     //nouvel objet task
     $task = new Task();
     //appel de la méthode showAllTask($bdd) qui retourne toutes les tâches
-    $task->showAllTask($bdd);    
+    $task->showAllTask($bdd, $user);    
     echo '</table><br>';
     echo '<p><input type="submit" value="terminer tâche" /></p>';
     echo '</form>';
