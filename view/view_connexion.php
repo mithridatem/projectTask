@@ -15,7 +15,7 @@
                 <label for="login_user">Login:</label>
                 <p class="champ"><input type="text" name="login_user"></p>
                 <label for="mdp_user">Mot de passe:</label>
-                <p class="champ"><input type="text" name="mdp_user"></p>
+                <p class="champ"><input type="password" name="mdp_user"></p>
                 <p class="champ"><input type="submit" value="Connexion"></p>
             </form>
             <p id="message"></p>

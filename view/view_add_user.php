@@ -19,7 +19,7 @@
             <label for="login_user">Ajouter un login :</label>
             <p><input type="text" name="login_user"></p>
             <label for="mdp_user">Ajouter un mot de passe :</label>
-            <p><input type="text" name="mdp_user"></p>
+            <p><input type="password" name="mdp_user"></p>
             <p><input type="submit" value="Ajouter"></p> 
         </form>
 </body>
